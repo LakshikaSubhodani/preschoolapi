@@ -1,14 +1,22 @@
 import React from "react";
+import SideBar from "../components/SideBar";
+import { Form, Button ,Col, Row, Container } from "react-bootstrap";
 
 export default function Dashboard(){
     return(
-        <div className="row">
-            <div className="col-md-4">
-                <h3>This is the side bar</h3>
-            </div>
-            <div className="col-md-8">
-                <h3>Dashboard window</h3>
-            </div>
-        </div>
+
+        <Container className="dashborad">
+
+                <Row>
+                   <Col lg={4} md={6} sm={12} className="dashbord-sidebar" >
+                        
+                    <SideBar/>
+                    <div className="col-md-8">
+                        <h3></h3>
+                    </div>
+        
+                    </Col>
+                </Row>
+        </Container>
     )
 }
