@@ -1,0 +1,28 @@
+.addAdmin .admin-dashboard{
+    width:30%;
+}
+.addAdmin .adminContainer{
+    float:left;
+    width:70%;
+    
+}
+.addAdmin .adminContainer .admin-heading{
+    text-align: center;
+    color:navy;
+    padding:70px;
+    margin-left:300px;
+  
+}
+.addAdmin .adminContainer .add-admin-btn {
+    top:10%;
+}
+.addAdmin .adminContainer .add-admin-btn .btn-add-admin{
+    margin-top: .1%;
+    margin-left:380px;
+    background-color: darkslateblue;
+    width:300px;
+    height:50px;
+    border-radius: 15px;
+    color:lightgrey;
+
+}
