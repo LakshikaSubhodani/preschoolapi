@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import { Form, Button ,Col, Row, Container } from "react-bootstrap";
 import loginIcon from '../images/user_avatar.png'
 import '../style/Login.css';
-import uiImg from '../images/LoginInterface1.jpg'
+import uiImg from '../images/LoginInterface2.jpg'
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 
@@ -31,7 +31,7 @@ export default function Login(){
     const handleFormSubmit=(e)=>{
         e.preventDefault();
 
-        //checking if email is empty
+        //checking if username is empty
         if(username!==''){
             const usernameRegex=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             if(usernameRegex.test(username)){
@@ -46,16 +46,16 @@ export default function Login(){
                     }
                 }
                 else{
-                    setUsernameError('Email does not match with our database');
+                    setUsernameError('Username does not match with our database');
                 }
             }
             else{
-                setUsernameError('Invalid email');
+                setUsernameError('Invalid username');
             }
 
         }
         else{
-            setUsernameError('Email required*');
+            setUsernameError('Username required*');
         }
         //checking if password is empty
         if(password!==''){
@@ -100,9 +100,10 @@ export default function Login(){
     return(
         <>
             <Container className="mt-5">
-            <h1 className="shadow-sm  mt-5 p-3 text-center rounded">Sign in</h1>
+            
                 <Row>
                    <Col lg={4} md={6} sm={12} className="text-center  mt-5 p-3" >
+                   <h1 >Sign in</h1>
                         <img className="icon-img" src={loginIcon} alt="icon"/>
 
                         
@@ -113,7 +114,7 @@ export default function Login(){
                         </>}
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 
-                                <Form.Control type="text" placeholder="Enter email" name="email"  onChange={handleUsernameChange} value={username}/>
+                                <Form.Control type="text" placeholder="Enter Username" name="email"  onChange={handleUsernameChange} value={username}/>
                                 {usernameError&&<div className="error-msg">{usernameError}</div>}
                                 
                             </Form.Group>
@@ -134,7 +135,7 @@ export default function Login(){
                     </Col>
 
                     <Col lg={8} md={6} sm={12} >
-                    <img className="w-100" src={uiImg} alt="icon"/>
+                    <img className="w-200 img" src={uiImg} alt="icon"/>
                     </Col>
                 </Row>
             </Container>

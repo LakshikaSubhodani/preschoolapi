@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {useState , useEffect} from "react";
 import { Form, Button ,Col, Row, Container } from "react-bootstrap";
 import "../style/AddAdminForm.css";
+import uiImg from '../images/register.jpg'
 export default function AddAdminForm(props) {
 
     const initialValues ={ email: "", password: "", role: "", };
@@ -58,7 +59,7 @@ export default function AddAdminForm(props) {
             }
 
         <Row>
-          <Col lg={12} md={6} sm={12} className="text-center  mt-5 p-3" >
+        <Col lg={4} md={6} sm={12} className="text-center  mt-5 p-3" >
             <div className="adminForm">
                <center> 
 
@@ -128,6 +129,9 @@ export default function AddAdminForm(props) {
               </center>
               </div>
               </Col>
+              <Col lg={8} md={6} sm={12} >
+                    <img className="w-200 img" src={uiImg} alt="icon"/>
+                    </Col>
             </Row>
           </Container>
       )
