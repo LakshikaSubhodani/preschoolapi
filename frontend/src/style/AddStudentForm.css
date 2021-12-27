@@ -1,0 +1,46 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.stdForm{
+    margin:auto;
+    
+}
+.student-register-form{
+    margin:0 auto;
+    text-align: center;
+    
+    max-width: 350px;
+
+}
+.student-register-form .student-register-form-heading{
+    color:purple;
+}
+.student-register-form .reset-button{
+        float: left;
+        border: 1px solid;
+    
+}
+.student-register-form .submit-button{
+    float: right;
+    border: 1px solid;
+
+}
+
+.student-register-form .form-group {
+    font-weight: 600;
+}
+
+p{
+    color: red;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+}
+.success-msg-reg{
+    color:blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+}
